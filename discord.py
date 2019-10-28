@@ -1,5 +1,4 @@
 import requests
-import time
 from time import gmtime, strftime
 while True:
     if strftime("%S") == "00":
