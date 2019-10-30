@@ -1,5 +1,6 @@
 import requests
 from time import gmtime, strftime, localtime
+
 while True:
     if strftime("%S") == "00":
         payload = '{"custom_status":{"text":"' + strftime("%I:%M %p | %y-%m-%d ⏰", localtime()) + '","emoji_name":"⏰"}}'
