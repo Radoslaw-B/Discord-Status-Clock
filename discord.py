@@ -1,8 +1,8 @@
 import requests
-from time import gmtime, strftime
+from time import gmtime, strftime, localtime
 while True:
     if strftime("%S") == "00":
-        payload = '{"custom_status":{"text":"' + strftime("%I:%M %p | %y-%m-%d ⏰", time.localtime()) + '","emoji_name":"⏰"}}'
+        payload = '{"custom_status":{"text":"' + strftime("%I:%M %p | %y-%m-%d ⏰", localtime()) + '","emoji_name":"⏰"}}'
         requests.patch("https://discordapp.com/api/v6/users/@me/settings", payload.encode("utf-8",),
             headers={
                 "accept": "*/*",
